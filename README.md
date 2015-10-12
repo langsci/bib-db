@@ -6,5 +6,7 @@
 
 `add_bibfile`: script to add BibTeX files to `langsci.bib`
 
-Included references:
+
+## Included references
+
 - [X] EOTMS 1
