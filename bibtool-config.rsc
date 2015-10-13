@@ -1,6 +1,8 @@
 %% This is a resource file for BibTool.
 %% Usage: bibtool -r bibtool-config.rsc -i INPUT -o OUTPUT
 
+%rewrite.rule { "Å" # "{\\AA}" }
+
 
 %%
 %% normalize entry format
@@ -56,9 +58,10 @@ new.entry.type           = "MISC"
 new.entry.type           = "PHDTHESIS"    
 new.entry.type           = "PROCEEDINGS"  
 new.entry.type           = "TECHREPORT"   
-new.entry.type           = "UNPUBLISHED"  
+new.entry.type           = "UNPUBLISHED"
+new.entry.type           = "REPORT"  
 pass.comments            = off
-preserve.key.case        = on
+preserve.key.case        = off
 preserve.keys            = off
 print.align              = 0	% default is 18
 % print.align.string       = 18
@@ -130,3 +133,8 @@ add.field {owner=langsci}
 %rename.field {title = booktitle if $type = ”book”}
 rewrite.rule { pages # "\([0-9]+\) *- *\([0-9]+\)" = "\1--\2" }
 expand.crossref = on
+
+%%
+%% expand macros in keys
+%%
+tex.define {\"[1]=#1e}
