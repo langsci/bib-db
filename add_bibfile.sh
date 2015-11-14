@@ -7,11 +7,14 @@ if [ $# -eq 0 ]
     exit 1
 fi
 
-if [[ -f $1 ]]; then
-	FILE=$1
+for FILE in $@
+do
+	echo "Processing $FILE"
+if [[ -f $FILE ]]; then
 	FILENAME="${FILE%%.*}"
 	## replace non-ascii symbols by TeX macros 
-	biber --tool --output_encoding=ascii $1
+	echo "... biber"
+	biber -q --tool --output_encoding=ascii $FILE
 	## first run with BibTool to resolve crossrefs
 	bibtool -r bibtool-config.rsc -i "$FILENAME"_bibertool.bib -o "$FILENAME"_bibertool.bib 2> bibtool-1st.log
 	>&2 echo "$(<bibtool-1st.log)"
@@ -23,8 +26,10 @@ if [[ -f $1 ]]; then
 	## remove temporary files
 	rm "$FILENAME"_bibertool.bib "$FILENAME"_bibertool_keyless.bib
 else
-	echo "File $1 not found!">&2
+	echo "File $FILE not found!">&2
 	exit 1
 fi
+	echo ""
+done
 
 

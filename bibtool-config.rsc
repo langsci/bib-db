@@ -82,7 +82,7 @@ print.newline            = 1
 print.parentheses        = off
 print.use.tab            = on
 print.wide.equal         = on 	% space around =
-quiet                    = off
+quiet                    = on
 rewrite.case.sensitive   = on
 rewrite.limit            = 512
 select.crossrefs	 = on
@@ -95,6 +95,7 @@ sort.format	= {%N(author) %s(year) %s(title) # %N(author) %s(year) %s(booktitle)
 sort.macros              = on
 sort.order{* =
 	 author
+	#sortkey
 	#title
 	#editor
 	#booktitle
@@ -130,7 +131,33 @@ verbose                  = off
 %% normalize field content
 %%
 delete.field {timestamp}
+delete.field {_orig}
+delete.field {date-added}
+delete.field {date-modified}
+delete.field {keywords}
+delete.field {language}
+delete.field {lid}
+delete.field {annotation}
+delete.field {lgcode}
+delete.field {aiatsis_callnumber}
+delete.field {aiatsis_reference_language}
+delete.field {aiatsis_code}
+delete.field {alnumcodes}
+delete.field {languoidbase_ids}
+delete.field {numberofpages}
+delete.field {ozbib_id}
+delete.field {ozbibnote}
+delete.field {ozbibreftype}
+delete.field {call-number}
+delete.field {lastchecked}
+delete.field {urldate}
+delete.field {bdsk-url-1}
+delete.field {isbn}
+delete.field {issn}
+delete.field {typ}
+delete.field {last_changed}
 add.field {owner=langsci}
+rename.field {journaltitle = journal}
 %rename.field {title = booktitle if $type = ”book”}
 rewrite.rule { pages # "\([0-9]+\) *- *\([0-9]+\)" = "\1--\2" }
 expand.crossref = on
