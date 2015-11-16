@@ -1,2 +1,2 @@
 
-add.field {timestamp="%s($year)-%s($month)-%s($day)"}
+add.field {timestamp="%s($year)-%s($month)-%s($day)-%s($minute)-%s($second)"}
