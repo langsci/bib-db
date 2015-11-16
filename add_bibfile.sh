@@ -15,8 +15,8 @@ if [[ -f $FILE ]]; then
 	## replace non-ascii symbols by TeX macros 
 	echo "... biber"
 	biber -q --tool --output_encoding=ascii $FILE
-	## first run with BibTool to resolve crossrefs
-	bibtool -r bibtool-config.rsc -i "$FILENAME"_bibertool.bib -o "$FILENAME"_bibertool.bib 2> bibtool-1st.log
+	## first run with BibTool to resolve crossrefs and to add timestamps
+	bibtool -r bibtool-config.rsc -r bibtool-timestamp-config -i "$FILENAME"_bibertool.bib -o "$FILENAME"_bibertool.bib 2> bibtool-1st.log
 	>&2 echo "$(<bibtool-1st.log)"
 	## remove keys  
 	perl -pe 's/^(@.*?{).*$/\1,/' "$FILENAME"_bibertool.bib > "$FILENAME"_bibertool_keyless.bib

@@ -130,7 +130,7 @@ verbose                  = off
 %%
 %% normalize field content
 %%
-delete.field {timestamp}
+%delete.field {timestamp}
 delete.field {_orig}
 delete.field {date-added}
 delete.field {date-modified}
