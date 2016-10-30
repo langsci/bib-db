@@ -1,7 +1,7 @@
 
 * bib-db
 
-`langsci.bib`: BibTeX entries from the published books of LangSci-Press.
+=langsci.bib=: BibTeX entries from the published books of LangSci-Press.
 
 `bibtool-config.rsc` and `bibtool-timestamp-config.rsc`: configuration files for [BibTool](https://github.com/ge-ne/bibtool)
 
