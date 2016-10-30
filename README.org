@@ -1,0 +1,43 @@
+
+* bib-db
+
+`langsci.bib`: BibTeX entries from the published books of LangSci-Press.
+
+`bibtool-config.rsc` and `bibtool-timestamp-config.rsc`: configuration files for [BibTool](https://github.com/ge-ne/bibtool)
+
+`add_bibfile`: script to add BibTeX files to `langsci.bib`
+
+`search_bibfile`: script to search BibTeX files
+
+** Included references
+
+- [X] EOTMS 1
+
+
+** Formatting rules
+
+|            | article | book  | incollection/inproceedings | thesis | collection/proceedings (book) | techreport (book) | misc/unpublished | online |
+|------------+---------+-------+----------------------------+--------+-------------------------------+-------------------+------------------+--------|
+| title      | +       | (+)   | +                          | +      | (+)                           | +                 | +                | +      |
+| booktitle  | -       | (+)   | +                          | -      | +                             | -                 | -                | -      |
+| author     | +       | (+)   | +                          | +      | -                             | +                 | +                | +      |
+| editor     | -       | (+)   | +                          | -      | +                             | -                 | -                | -      |
+| year       | +       | +     | +                          | +      | +                             | +                 | +                | +      |
+| edition    | -       | ( + ) | ( + )                      | -      | ( + )                         | -                 | -                | -      |
+| series     | -       | ( + ) | ( + )                      | -      | (+)                           | -                 | -                | -      |
+| journal    | +       | -     | -                          | -      | -                             | -                 | -                | -      |
+| volume     | +       | (+)   | ( + )                      | -      | ( + )                         | +                 | -                | -      |
+| number     | (+)     | ( + ) | -                          | +      | ( + )                         | -                 | -                | -      |
+| pages      | (+)     | -     | +                          | -      | -                             | -                 | -                | -      |
+| chapter    | -       | -     | ( + )                      | -      | -                             | -                 | -                | -      |
+| address    | -       | +     | +                          | +      | +                             | +                 | +                | -      |
+| publisher  | -       | +     | +                          | school | +                             | +                 | -                | -      |
+| url        | +       | (+)   | ( + )                      | +      | ( + )                         | ( + )             | ( + )            | +      |
+| urldate    | +       | (+)   | ( + )                      | +      | ( + )                         | ( + )             | ( + )            | +      |
+| doi        | +       | (+)   | ( + )                      | +      | ( + )                         | ( + )             | ( + )            | -      |
+| school     | -       | -     | -                          | +      | -                             | -                 | -                | -      |
+| type       | -       | -     | -                          | +      | -                             | -                 | -                | -      |
+| note       | -       | ( + ) | ( + )                      | ( + )  | ( + )                         | ( + )             | +                | -      |
+|------------+---------+-------+----------------------------+--------+-------------------------------+-------------------+------------------+--------|
+| owner      | +       | +     | +                          | +      | +                             | +                 | +                | +      |
+| lastchange | +       | +     | +                          | +      | +                             | +                 | +                | +      |
