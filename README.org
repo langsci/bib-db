@@ -16,6 +16,9 @@
 
 ** Formatting rules
 
+  - Bib-db only contains full entries without the =crossref= field.
+  - Bib-db only allows for the following entry types (columns) and entry fields (rows):
+
 |            | article | book  | incollection/ inproceedings | thesis  | collection/ proceedings (book) | techreport (book) | misc/ unpublished | online |
 |------------+---------+-------+-----------------------------+---------+--------------------------------+-------------------+-------------------+--------|
 | title      | +       | ( + ) | +                           | +       | ( + )                          | +                 | +                 | +      |
@@ -39,6 +42,8 @@
 | type       | -       | -     | -                           | +       | -                              | -                 | -                 | -      |
 | note       | -       | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | +                 | ( + )  |
 |------------+---------+-------+-----------------------------+---------+--------------------------------+-------------------+-------------------+--------|
-|------------+---------+-------+-----------------------------+---------+--------------------------------+-------------------+-------------------+--------|
-| owner      | +       | +     | +                           | +       | +                              | +                 | +                 | +      |
-| lastchange | +       | +     | +                           | +       | +                              | +                 | +                 | +      |
+
+  - Additional meta fields: =sortkey=, =owner=  ( = langsci) , =lastchange=
+  - Entry keys are made up by referring to maximally the first two =author= names and the last two digits of =year= in the following way: =Name:12= or =Name1:Name2:12= or =Name:etal:12= or
+    - As for edited volumes, =editor= names are used and the infix =ed=  is added: =Name:ed:12= or =Name1:Name2:ed:12= or =Name:etal:ed:12=
+ 
