@@ -18,27 +18,27 @@
 
   1) Bib-db only contains full entries without the =crossref= field.
   2) Bib-db only allows for the following entry types (columns) and entry fields (rows):
-|           | article | book  | incollection/ inproceedings | thesis  | collection/ proceedings (book) | techreport (book) | online | unpublished | misc  |
-| title     | +       | ( + ) | +                           | +       | ( + )                          | +                 | +      | +           | ( + ) |
-| booktitle | -       | ( + ) | +                           | -       | +                              | -                 | ( + )  | -           | ( + ) |
-| author    | +       | ( + ) | +                           | +       | -                              | +                 | +      | +           | ( + ) |
-| editor    | -       | ( + ) | +[fn:1]                     | -       | +[fn:1]                        | -                 | ( + )  | -           | ( + ) |
-| year      | +       | +     | +                           | +       | +                              | +                 | +      | +           | ( + ) |
-| edition   | -       | ( + ) | ( + )                       | -       | ( + )                          | -                 | -      | -           | ( + ) |
-| series    | -       | ( + ) | ( + )                       | -       | ( + )                          | ( + )             | -      | -           | ( + ) |
-| journal   | +       | -     | -                           | -       | -                              | -                 | -      | -           | ( + ) |
-| volume    | +       | ( + ) | ( + )                       | -       | ( + )                          | -                 | -      | -           | ( + ) |
-| number    | ( + )   | ( + ) | -                           | +       | ( + )                          | ( + )             | -      | -           | ( + ) |
-| pages     | ( + )   | -     | +                           | -       | -                              | -                 | -      | -           | ( + ) |
-| chapter   | -       | -     | ( + )                       | -       | -                              | -                 | -      | -           | ( + ) |
-| address   | -       | +     | +                           | +       | +                              | +                 | -      | -           | ( + ) |
-| publisher | -       | +     | +                           | =school | +                              | +                 | -      | -           | ( + ) |
-| url       | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
-| urldate   | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
-| doi       | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | ( + )  | ( + )       | ( + ) |
-| school    | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
-| type      | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
-| note      | ( + )   | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | ( + )  | +           | ( + ) |
+     |           | article | book  | incollection/ inproceedings | thesis  | collection/ proceedings (book) | techreport (book) | online | unpublished | misc  |
+     | title     | +       | ( + ) | +                           | +       | ( + )                          | +                 | +      | +           | ( + ) |
+     | booktitle | -       | ( + ) | +                           | -       | +                              | -                 | ( + )  | -           | ( + ) |
+     | author    | +       | ( + ) | +                           | +       | -                              | +                 | +      | +           | ( + ) |
+     | editor    | -       | ( + ) | +[fn:1]                     | -       | +[fn:1]                        | -                 | ( + )  | -           | ( + ) |
+     | year      | +       | +     | +                           | +       | +                              | +                 | +      | +           | ( + ) |
+     | edition   | -       | ( + ) | ( + )                       | -       | ( + )                          | -                 | -      | -           | ( + ) |
+     | series    | -       | ( + ) | ( + )                       | -       | ( + )                          | ( + )             | -      | -           | ( + ) |
+     | journal   | +       | -     | -                           | -       | -                              | -                 | -      | -           | ( + ) |
+     | volume    | +       | ( + ) | ( + )                       | -       | ( + )                          | -                 | -      | -           | ( + ) |
+     | number    | ( + )   | ( + ) | -                           | +       | ( + )                          | ( + )             | -      | -           | ( + ) |
+     | pages     | ( + )   | -     | +                           | -       | -                              | -                 | -      | -           | ( + ) |
+     | chapter   | -       | -     | ( + )                       | -       | -                              | -                 | -      | -           | ( + ) |
+     | address   | -       | +     | +                           | +       | +                              | +                 | -      | -           | ( + ) |
+     | publisher | -       | +     | +                           | =school | +                              | +                 | -      | -           | ( + ) |
+     | url       | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
+     | urldate   | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
+     | doi       | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | ( + )  | ( + )       | ( + ) |
+     | school    | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
+     | type      | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
+     | note      | ( + )   | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | ( + )  | +           | ( + ) |
 
   3) Additional meta fields: =shortauthor= , =sortkey=, =owner=  (= langsci) , =lastchange= (of the format =2015-11-18 15:17:28=)
   4) Entry keys are made up by referring up to the first two =author= names and the last two digits of =year= in the following way: =Name:12= or =Name1:Name2:12= or =Name:etal:12=.
