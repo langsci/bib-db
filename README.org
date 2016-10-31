@@ -33,14 +33,14 @@
      | chapter   | -       | -     | ( + )                       | -       | -                              | -                 | -      | -           | ( + ) |
      | address   | -       | +     | +                           | +       | +                              | +                 | -      | -           | ( + ) |
      | publisher | -       | +     | +                           | =school | +                              | +                 | -      | -           | ( + ) |
-     | url       | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
-     | urldate   | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
-     | doi       | +       | ( + ) | ( + )                       | +       | ( + )                          | ( + )             | ( + )  | ( + )       | ( + ) |
+     | url       | ( + )   | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
+     | urldate   | ( + )   | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | +      | ( + )       | ( + ) |
+     | doi       | ( + )   | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | ( + )  | ( + )       | ( + ) |
      | school    | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
      | type      | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
      | note      | ( + )   | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | ( + )  | +           | ( + ) |
 
-  3) Additional meta fields: =shortauthor= , =sortkey=, =owner=  (= langsci) , =lastchange= (of the format =2015-11-18 15:17:28=)
+  3) Additional meta fields: =shortauthor= , =sortkey=, =owner=  (= langsci) , =lastchange= (of the format =2015-11-18 15:17:28=), =lastcheck= (of the format =2015-11-18 15:17:28=), =status= ( = ok | fixme )
   4) Entry keys are made up by referring up to the first two =author= names and the last two digits of =year= in the following way: =Name:12= or =Name1:Name2:12= or =Name:etal:12=.
       As for edited volumes, =editor= names are used and the infix =ed= is added: =Name:ed:12= or =Name1:Name2:ed:12= or =Name:etal:ed:12=
 
