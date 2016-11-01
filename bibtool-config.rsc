@@ -55,21 +55,23 @@ ignored.word             = "eine"
 %% entry types	(in order to change their appearance)
 %%
 
-new.entry.type           = "ARTICLE"      
-new.entry.type           = "BOOK"        
-new.entry.type           = "COLLECTION"        
-new.entry.type           = "INBOOK"       
-new.entry.type           = "INCOLLECTION" 
-new.entry.type           = "INPROCEEDINGS"
-new.entry.type           = "MANUAL"       
-new.entry.type           = "MASTERSTHESIS"
-new.entry.type           = "MISC"         
-new.entry.type           = "PHDTHESIS"    
-new.entry.type           = "PROCEEDINGS"  
-new.entry.type           = "TECHREPORT"
-new.entry.type           = "THESIS" 
-new.entry.type           = "UNPUBLISHED"
-new.entry.type           = "REPORT"  
+%new.entry.type           = "ARTICLE"      
+%new.entry.type           = "BOOK"        
+%new.entry.type           = "COLLECTION"        
+%new.entry.type           = "INBOOK"       
+%new.entry.type           = "INCOLLECTION" 
+%new.entry.type           = "INPROCEEDINGS"
+%new.entry.type           = "MANUAL"       
+%new.entry.type           = "MASTERSTHESIS"
+%new.entry.type           = "MISC"         
+%new.entry.type           = "PHDTHESIS"    
+%new.entry.type           = "PROCEEDINGS"  
+%new.entry.type           = "TECHREPORT"
+%new.entry.type           = "THESIS" 
+%new.entry.type           = "UNPUBLISHED"
+%new.entry.type           = "REPORT"
+
+new.entry.type           = "Thesis" 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,13 +168,13 @@ delete.field {isbn}
 delete.field {issn}
 delete.field {typ}
 delete.field {last_changed}
-add.field {owner = langsci}
+add.field {creator = langsci}
 rewrite.case.sensitive   = on    % case sensitivity during matching
 rewrite.limit            = 512   % max number of applications of each rewrite rule (-1 is unrestricted)
 rename.field {journaltitle = journal}
 rename.field {location = address}
-rename.field {title = booktitle if $type = "collection"}
-rename.field {title = booktitle if $type = "proceedings"}
+rename.field {title = booktitle if $type = "^collection$"}
+rename.field {title = booktitle if $type = "^proceedings$"}
 rewrite.rule { pages # "\([0-9]+\) *- *\([0-9]+\)" = "\1--\2" }
 %rewrite.rule { "Å" # "{\\AA}" }
 expand.crossref = on
@@ -205,6 +207,7 @@ sort.order{* =
 	#url
 	#doi
 	#owner
+	#creator
 	}                 % * is the wildcard for entry types
 
 
@@ -217,7 +220,7 @@ symbol.type              = lower        % print field names in lower case
 pass.comments            = off
 
 %% position of '=' of field-value pairs
-print.align              = 0	% default is 18
+print.align              = 15	% default is 18
 % print.align.string       = 18
 % print.align.preamble     = 11
 % print.align.comment      = 10
