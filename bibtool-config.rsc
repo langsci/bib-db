@@ -52,14 +52,12 @@ ignored.word             = "eine"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%% entry types	(in order to redefine their appearance)
+%% entry types	(in order to change their appearance)
 %%
 
 new.entry.type           = "ARTICLE"      
 new.entry.type           = "BOOK"        
 new.entry.type           = "COLLECTION"        
-new.entry.type           = "BOOKLET"      
-new.entry.type           = "CONFERENCE"   
 new.entry.type           = "INBOOK"       
 new.entry.type           = "INCOLLECTION" 
 new.entry.type           = "INPROCEEDINGS"
@@ -178,7 +176,7 @@ rename.field {title = booktitle if $type = "proceedings"}
 rewrite.rule { pages # "\([0-9]+\) *- *\([0-9]+\)" = "\1--\2" }
 %rewrite.rule { "Å" # "{\\AA}" }
 expand.crossref = on
-sort.order{* =           % wildcard for entry types
+sort.order{* =           
 	 author
 	#sortkey
 	#title
@@ -207,7 +205,7 @@ sort.order{* =           % wildcard for entry types
 	#url
 	#doi
 	#owner
-	}
+	}                 % * is the wildcard for entry types
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
