@@ -178,7 +178,7 @@ rename.field {title = booktitle if $type = "proceedings"}
 rewrite.rule { pages # "\([0-9]+\) *- *\([0-9]+\)" = "\1--\2" }
 %rewrite.rule { "Å" # "{\\AA}" }
 expand.crossref = on
-sort.order{* =           % * is the wildcard for an entry type
+sort.order{* =           % wildcard for entry types
 	 author
 	#sortkey
 	#title
@@ -206,7 +206,8 @@ sort.order{* =           % * is the wildcard for an entry type
 	#type
 	#url
 	#doi
-	#owner}
+	#owner
+	}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
