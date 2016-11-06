@@ -84,20 +84,24 @@ bibtool -- select{@techreport} -r $BT_ENTRYTYPES $TARGET | bibtool -- 'select{bo
 bibtool -- select{@unpublished} -r $BT_ENTRYTYPES $TARGET | bibtool -- 'select.non{author year note}' -r $BT_ENTRYTYPES | bibtool -- add.field{fixme=incomplete} -r $BT_ENTRYTYPES -o $TARGETPATH/sc-unpublished-incomplete.bib
 bibtool -- select{@unpublished} -r $BT_ENTRYTYPES $TARGET | bibtool -- 'select{howpublished booktitle editor edition series journal volume number pages chapter address publisher school type}' -r $BT_ENTRYTYPES | bibtool -- add.field{fixme=toomuch} -r $BT_ENTRYTYPES -o $TARGETPATH/sc-unpublished-toomuch.bib
 
-for SCFILE in $( ls sc-* ); do
-    bibtool -r $BT_CONFIG -r $BT_ENTRYTYPES -i $SCFILE $TARGET -o $TARGET
-done
+if [ ! -z "$(ls $TARGETPATH/sc-*)" ]
+then
+		for SCFILE in $( ls $TARGETPATH/sc-* ); do
+				bibtool -r $BT_CONFIG -r $BT_ENTRYTYPES -i $SCFILE $TARGET -o $TARGET
+		done
+fi
 
 echo "postprocessing with perl ..."
 ## replace \small in von-parts of names
 perl -pi -e 's/\\small\{(.)\}/\l\1/g' $TARGET
 perl -pi -e 's/\\apostrophe\{T\}/\047t/g' $TARGET
 
+echo "cleaning up ..."
 ## clean up: remove temporary files
 rm "$BIBFILENAME"_bibertool.* 2> /dev/null
 rm $TARGETPATH/sc-* 2> /dev/null
-	
 
-echo ""
+echo "Done. You can use \`git diff\` to see what has changed."	
+
 
 
