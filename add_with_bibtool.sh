@@ -44,7 +44,7 @@ biber -q --tool --output_encoding=ascii $BIBFILE
 
 ## first run with BibTool to resolve crossrefs and to add timestamps
 echo "bibtool (1st run) ..."
-bibtool -r $BT_CONFIG -r $BT_ENTRYTYPES -r bibtool-timestamp-config -i "$BIBFILENAME"_bibertool.bib -o "$BIBFILENAME"_bibertool.bib 2> $TARGETPATH/bibtool-1st.log
+bibtool -r $BT_CONFIG -r $BT_ENTRYTYPES -r $BT_TIMESTAMP -i "$BIBFILENAME"_bibertool.bib -o "$BIBFILENAME"_bibertool.bib 2> $TARGETPATH/bibtool-1st.log
 >&2 echo "$(<$TARGETPATH/bibtool-1st.log)"
 
 echo "preprocessing with perl ..."
