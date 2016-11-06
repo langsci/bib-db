@@ -19,7 +19,7 @@ fi
 TARGET=$2
 if [[ -f $TARGET ]]; then
 		TARGETNAME=${TARGET%%.*}	# including path
-		TARGETPATH=${TARGET%/*}
+		TARGETPATH="$( cd "$( dirname "$TARGET" )" && pwd )"    # TARGETPATH=${TARGET%/*}
 		TARGETTIME=$(date -Iseconds -r "$TARGET")
 else
 	echo "Target $TARGET not found!">&2
