@@ -39,10 +39,11 @@
      | school    | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
      | type      | -       | -     | -                           | +       | -                              | -                 | -      | -           | ( + ) |
      | note      | ( + )   | ( + ) | ( + )                       | ( + )   | ( + )                          | ( + )             | ( + )  | +           | ( + ) |
-
   3) Additional meta fields: =shortauthor= , =sortkey=, =creator=  (= langsci) , =timestamp= (of the format =2015-11-18 15:17:28=), =fixme=.
   4) Entry keys are made up by referring up to the first two =author= names and the last two digits of =year= in the following way: =Name:12= or =Name1:Name2:12= or =Name:etal:12=.
       As for edited volumes, =editor= names are used and the infix =ed= is added: =Name:ed:12= or =Name1:Name2:ed:12= or =Name:etal:ed:12=
+
+Any violation of 1)--3) will cause the insertion of a =fixme= field.
 
 Rationale:
   - compatibility with BibTeX concerning: entry types, entry fields, encoding (ISO-8859-1)
