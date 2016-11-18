@@ -62,6 +62,32 @@ select.fields            = "$key"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
+%% entry types	(in order to change their appearance)
+%%
+
+%new.entry.type           = "ARTICLE"      
+%new.entry.type           = "BOOK"        
+%new.entry.type           = "COLLECTION"        
+%new.entry.type           = "INBOOK"       
+%new.entry.type           = "INCOLLECTION" 
+%new.entry.type           = "INPROCEEDINGS"
+%new.entry.type           = "MANUAL"       
+%new.entry.type           = "MASTERSTHESIS"
+%new.entry.type           = "MISC"         
+%new.entry.type           = "PHDTHESIS"    
+%new.entry.type           = "PROCEEDINGS"  
+%new.entry.type           = "TECHREPORT"
+%new.entry.type           = "THESIS" 
+%new.entry.type           = "UNPUBLISHED"
+%new.entry.type           = "REPORT"
+
+new.entry.type           = "Thesis"
+new.entry.type           = "Collection"
+new.entry.type           = "Report"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
 %% sort entries (relevant for duplicate detection) 
 %%
 
@@ -144,7 +170,9 @@ delete.field {isbn}
 delete.field {issn}
 delete.field {typ}
 delete.field {last_changed}
+delete.field {owner}
 add.field {creator = langsci}
+add.field {timestamp="%s($year)-%s($month)-%s($day) %s($hour):%s($minute):%s($second)"}
 rewrite.case.sensitive   = on    % case sensitivity during matching
 rewrite.limit            = 512   % max number of applications of each rewrite rule (-1 is unrestricted)
 rename.field {journaltitle = journal}
