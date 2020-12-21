@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#cat sources/* > localbibs.bib
-
 for bibfile in sources/*.bib
 do echo $bibfile
    biber --tool $bibfile | grep ERROR

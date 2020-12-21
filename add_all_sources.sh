@@ -4,5 +4,5 @@ BIBFILES=sources/*.bib
 
 for bibfile in $BIBFILES
 do
-add_bibfile.sh $bibfile
+bash add_bibfile.sh $bibfile localbibs.bib
 done
